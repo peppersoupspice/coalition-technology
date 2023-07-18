@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Coalition Technologies</title>
+</head>
+<body>
+<!-- Section 1 -->
+<section id="section1">
+  <div class="navbar1">
+    <img id="logo1" src="img/logo 1.png" alt="Logo">
+    <div class="accordion-button"></div>
+    <div class="accordion-content">
+      <ul>
+        <li><a href="#">01. HISTORY</a></li>
+        <li><a href="#">02. TEAM</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- Section 2 -->
+  <section id="section2">
+    <div class="navbar2">
+      <img src="img/logo 2.png" alt="Logo">
+      <div class="accordion-button"></div>
+      <div class="accordion-content">
+        <ul>
+          <li><a href="#">01. HISTORY</a></li>
+          <li><a href="#">02. TEAM</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section id="section3">
+    
+    <div class="intro">
+      <p class="history">
+        <span class="number">01.</span>HISTORY
+      </p>
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section id="section4">
+    <img class="carousel-bg" src="img/carousel bg.jpg" alt="Carousel Bg">
+    <div class="carousel">
+      <img src="img/tn 1.jpg" alt="thumbnail 1">
+      <img src="img/tn 2.jpg" alt="thumbnail 2">
+      <img src="img/tn 3.jpg" alt="thumbnail 3">
+      <img src="img/tn 4.jpg" alt="thumbnail 4">
+    </div>
+    <div class="carousel-dots"></div> 
+</section>
+  </section>
+
+  <!-- Section 5 --> 
+  <section id="section5">
+    <div class="intro-1">
+      <p class="climb">
+        <span class="number">02.</span>CLIMB
+      </p>
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div> 
+  </section>
+
+   <!-- Section 6 -->
+   <section id="section6">
+    <div id="image-container">
+      <img id="content" src="/img/content1.jpg" alt="Image 6">
+    </div>
+    <div class="navbar3">
+      <button type="button" onclick="changeImage('img/content1.jpg')">MOUNTAIN 1</button>
+      <button type="button" onclick="changeImage('img/content2.jpg')">MOUNTAIN 2</button>
+    </div>
+ 
+  </section>
+  
+
+  <!-- Footer -->
+  <footer>
+    <img src="img/Logo 3.png" alt="Logo">
+    <p>&copy; 2016. ALL RIGHTS RESERVED.</p>
+  </footer>
+<!-- Code injected by live-server -->
+<script src="sandbox.js">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
